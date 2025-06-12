@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: #010324;
+    align-content: center;
+    justify-items: center;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    align-content: center;
+    background-color: rgb(255, 83, 189);
+}
+
+div > a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
