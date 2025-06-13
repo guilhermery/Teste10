@@ -10,7 +10,6 @@ body {
     color: #fff;
     font-family: sans-serif;
     text-align: center;
-    overflow: hidden; /* impede scroll causado pelos corações */
 }
 
 .container {
@@ -23,6 +22,7 @@ body {
 }
 
 iframe {
+    width: 400px;
     border-radius: 12px;
     margin: 20px 0;
 }
