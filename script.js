@@ -1,8 +1,6 @@
  // Contador de tempo
   const dataInicial = new Date("2025-05-10T19:00:00");
   const slide = document.getElementById('slide');
-  const imagens = slide.querySelectorAll('img');
-  let index = 0;
 
   setInterval(() => {
     const agora = new Date();
@@ -40,10 +38,3 @@
       heartblue.remove();
     }, 4000);
   }, 300)
-
-function passarSlide() {
-    index = (index + 1) % imagens.length;
-    slide.style.transform = `translateX(-${index * 320}px)`;
-}
-
-setInterval(passarSlide, 2500); // troca a cada 2,5 segundos

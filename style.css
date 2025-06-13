@@ -10,26 +10,28 @@ body {
     color: #fff;
     font-family: sans-serif;
     text-align: center;
-    overflow: hidden; /* evita que elementos como os corações que caem forcem o scroll */
+    overflow: hidden; /* impede scroll causado pelos corações */
 }
 
 .container {
     margin: 20px;
     max-width: 400px;
-    max-height: 90vh; /* NOVO: limita a altura */
+    max-height: 90vh;
     position: relative;
     z-index: 1;
+    padding-bottom: 20px;
 }
 
 iframe {
     border-radius: 12px;
     margin: 20px 0;
 }
+
 .timer {
-    margin: 10px;
-    font-size: 1.15rem;
     margin: 15px;
+    font-size: 1.15rem;
 }
+
 .heart {
     position: fixed;
     top: -50px;
@@ -38,33 +40,34 @@ iframe {
     animation: fall 4s linear infinite;
     z-index: 0;
 }
+
 @keyframes fall {
     0% { transform: translateY(0) rotate(0deg); opacity: 1; }
     100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
 }
 
+/* TIRINHA DE FOTOS VERTICAL */
 .fotos-container {
-      width: 320px;
-      height: 300px;
-      overflow: hidden;
-      margin: 25px auto;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
-      position: relative;
-    }
+    width: 100%;
+    max-width: 350px;
+    margin: 25px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    background-color: #ffffff10;
+}
 
 .fotos-slide {
     display: flex;
-    width: 100%;
-    height: 100%;
-    transition: transform 1s ease;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .fotos-slide img {
-    width: 320px;
-    height: 300px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    flex-shrink: 0;
+    border-radius: 8px;
 }
 
 #contador {
@@ -73,4 +76,5 @@ iframe {
 
 .message > p {
     text-align: justify;
+    padding: 0 10px;
 }
