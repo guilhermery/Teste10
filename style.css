@@ -2,22 +2,26 @@
 
 body {
     width: 100vw;
-    height: 100vw;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center; /* Alinha verticalmente */
     margin: 0;
     background-color: #010324;
     color: #fff;
     font-family: sans-serif;
     text-align: center;
+    overflow: hidden; /* evita que elementos como os corações que caem forcem o scroll */
 }
+
 .container {
     margin: 20px;
     max-width: 400px;
+    max-height: 90vh; /* NOVO: limita a altura */
     position: relative;
     z-index: 1;
 }
+
 iframe {
     border-radius: 12px;
     margin: 20px 0;
